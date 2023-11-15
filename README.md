@@ -26,7 +26,7 @@ Check out the live demo of BluerayMusic: [BluerayMusic](https://blueraymusic.git
 
 To get started with BluerayMusic on your local machine, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/blueraymusic/BluerayMusic.git`
+1. Clone this repository: `git clone https://github.com/blueraymusic/Blueray.git`
 2. Open the `index.html` file in your web browser.
 
 ## Contributing
