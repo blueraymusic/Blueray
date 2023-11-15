@@ -14,7 +14,7 @@ BluerayMusic is a music-focused website hosted on GitHub Pages, dedicated to bri
 
 ## Live Demo
 
-Check out the live demo of BluerayMusic: [BluerayMusic](https://blueraymusic.github.io/blueray/)
+Check out the live demo of BluerayMusic: [BluerayMusic](https://blueraymusic.github.io/Blueray/)
 
 ## Technologies Used
 
