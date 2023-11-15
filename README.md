@@ -39,6 +39,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-Have questions or suggestions? Contact us at informativequick@gmail.com
+Have questions or suggestions? Contact us at sissokoadel057@gmail.com
 
 Thank you for visiting BluerayMusic and exploring the world of music with us!
