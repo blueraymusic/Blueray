@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    
+</head>
+<style>
+    
+    body {
+        margin: 0;
+        background-color: #F2D7D3;
+        font-family: "Oswald&quot", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 1rem;
+        overflow: hidden;
+        min-height: 100%;
+    
+    }
+   
+    
+  
+</style>
+
+<style>
+    * {
+        font-family: Nunito, sans-serif;
+      }
+      
+      .text-blk {
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        line-height: 25px;
+      }
+      
+      .responsive-container-block {
+        min-height: 75px;
+        height: fit-content;
+        width: 100%;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+        justify-content: flex-start;
+      }
+      
+      .responsive-container-block.bigContainer {
+        padding-top: 10px;
+        padding-right: 30px;
+        padding-bottom: 35px;
+        padding-left: 30px;
+        background-image: url("https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb29.png");
+        background-position-x: initial;
+        background-position-y: initial;
+        background-size: cover;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: initial;
+        background-repeat-x: no-repeat;
+        background-repeat-y: no-repeat;
+      }
+      
+      .responsive-container-block.Container {
+        max-width: 800px;
+        /*flex-direction: column;*/
+        align-items: center;
+        padding-top: 40px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+        padding-left: 20px;
+        margin-top: 150px;
+        margin-right: auto;
+        margin-bottom: 150px;
+        margin-left: auto;
+        background-color: #ffffff82;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+      }
+      
+      .text-blk.heading {
+        font-size: 36px;
+        line-height: 45px;
+        font-weight: 800;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+      }
+      
+      .text-blk.subHeading {
+        text-align: center;
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 0px;
+        margin-right: 0px;
+        margin-bottom: 60px;
+        margin-left: 0px;
+      }
+      
+      .socialIcon {
+        width: 150px;
+        height: 150px;
+
+        animation: socialIcon 17s linear infinite; 
+        -webkit-animation: socialIcon 17s linear infinite;
+
+      }
+        /* Define the animation using keyframes */
+    @keyframes socialIcon {
+        from {
+            transform: rotate(0deg); /* Starting rotation (0 degrees) */
+          }
+        to {
+            transform: rotate(360deg); /* Ending rotation (360 degrees, a full rotation) */
+        }
+    }
+      
+      
+      .social-icons-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      
+      .social-icon {
+        margin: 0 50px 0 50px;
+      }
+      
+      .social-icon:hover {
+        cursor: pointer;
+      }
+      
+      @media (max-width: 768px) {
+        .text-blk.heading {
+          font-size: 55px;
+          line-height: 65px;
+        }
+      
+        .text-blk.subHeading {
+          font-size: 18px;
+          line-height: 24px;
+        }
+      
+        .socialIcon {
+          width: 20px;
+          height: 20px;
+        }
+      
+        .text-blk.subHeading {
+          line-height: 27px;
+        }
+      
+        .text-blk.heading {
+          font-size: 32px;
+          line-height: 40px;
+          margin-top: 0px;
+          margin-right: 0px;
+          margin-bottom: 20px;
+          margin-left: 0px;
+        }
+      
+        .social-icon {
+          margin: 0 25px 0 25px;
+        }
+      }
+      
+      @media (max-width: 500px) {
+        .responsive-container-block.bigContainer {
+          padding-top: 10px;
+          padding-right: 20px;
+          padding-bottom: 10px;
+          padding-left: 20px;
+        }
+      
+        .text-blk.heading {
+          font-size: 45px;
+          line-height: 55px;
+          margin-top: 0px;
+          margin-right: 0px;
+          margin-bottom: 20px;
+          margin-left: 0px;
+        }
+      
+        .text-blk.subHeading {
+          font-size: 14px;
+          line-height: 22px;
+          margin-top: 0px;
+          margin-right: 0px;
+          margin-bottom: 30px;
+          margin-left: 0px;
+        }
+      
+        .social-icons-container {
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+        }
+      
+        .text-blk.subHeading {
+          font-size: 16px;
+          line-height: 23px;
+        }
+      
+        .text-blk.heading {
+          font-size: 26px;
+          line-height: 30px;
+        }
+      
+        .social-icon {
+          margin: 0 20px 0 20px;
+        }
+      }
+</style>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap');
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wk-desk-1 {
+  width: 8.333333%;
+}
+
+.wk-desk-2 {
+  width: 16.666667%;
+}
+
+.wk-desk-3 {
+  width: 25%;
+}
+
+.wk-desk-4 {
+  width: 33.333333%;
+}
+
+.wk-desk-5 {
+  width: 41.666667%;
+}
+
+.wk-desk-6 {
+  width: 50%;
+}
+
+.wk-desk-7 {
+  width: 58.333333%;
+}
+
+.wk-desk-8 {
+  width: 66.666667%;
+}
+
+.wk-desk-9 {
+  width: 75%;
+}
+
+.wk-desk-10 {
+  width: 83.333333%;
+}
+
+.wk-desk-11 {
+  width: 91.666667%;
+}
+
+.wk-desk-12 {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .wk-ipadp-1 {
+    width: 8.333333%;
+  }
+
+  .wk-ipadp-2 {
+    width: 16.666667%;
+  }
+
+  .wk-ipadp-3 {
+    width: 25%;
+  }
+
+  .wk-ipadp-4 {
+    width: 33.333333%;
+  }
+
+  .wk-ipadp-5 {
+    width: 41.666667%;
+  }
+
+  .wk-ipadp-6 {
+    width: 50%;
+  }
+
+  .wk-ipadp-7 {
+    width: 58.333333%;
+  }
+
+  .wk-ipadp-8 {
+    width: 66.666667%;
+  }
+
+  .wk-ipadp-9 {
+    width: 75%;
+  }
+
+  .wk-ipadp-10 {
+    width: 83.333333%;
+  }
+
+  .wk-ipadp-11 {
+    width: 91.666667%;
+  }
+
+  .wk-ipadp-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wk-tab-1 {
+    width: 8.333333%;
+  }
+
+  .wk-tab-2 {
+    width: 16.666667%;
+  }
+
+  .wk-tab-3 {
+    width: 25%;
+  }
+
+  .wk-tab-4 {
+    width: 33.333333%;
+  }
+
+  .wk-tab-5 {
+    width: 41.666667%;
+  }
+
+  .wk-tab-6 {
+    width: 50%;
+  }
+
+  .wk-tab-7 {
+    width: 58.333333%;
+  }
+
+  .wk-tab-8 {
+    width: 66.666667%;
+  }
+
+  .wk-tab-9 {
+    width: 75%;
+  }
+
+  .wk-tab-10 {
+    width: 83.333333%;
+  }
+
+  .wk-tab-11 {
+    width: 91.666667%;
+  }
+
+  .wk-tab-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .wk-mobile-1 {
+    width: 8.333333%;
+  }
+
+  .wk-mobile-2 {
+    width: 16.666667%;
+  }
+
+  .wk-mobile-3 {
+    width: 25%;
+  }
+
+  .wk-mobile-4 {
+    width: 33.333333%;
+  }
+
+  .wk-mobile-5 {
+    width: 41.666667%;
+  }
+
+  .wk-mobile-6 {
+    width: 50%;
+  }
+
+  .wk-mobile-7 {
+    width: 58.333333%;
+  }
+
+  .wk-mobile-8 {
+    width: 66.666667%;
+  }
+
+  .wk-mobile-9 {
+    width: 75%;
+  }
+
+  .wk-mobile-10 {
+    width: 83.333333%;
+  }
+
+  .wk-mobile-11 {
+    width: 91.666667%;
+  }
+
+  .wk-mobile-12 {
+    width: 100%;
+  }
+}
+</style>
+
+<body>
+
+
+    <div class="responsive-container-block bigContainer">
+        <div class="responsive-container-block Container">
+    
+          <p class="text-blk heading" style="text-indent: 220px;">
+            Chill 
+          </p>
+          <p class="text-blk subHeading">
+            <img class="socialIcon image-block" src="https://th.bing.com/th/id/R.2de82b8762186205ea8a0f12108d3e23?rik=LR4XftaSKZdZzA&amp;pid=ImgRaw&amp;r=0" onclick="redirectAbout()"></p>
+            <p class="text-blk heading" style="text-indent: 0px;">
+                 Hop
+              </p>
+            <div class="social-icons-container">     
+                <p class="text-blk " style="text-indent: 0px; position: relative; margin: top 100px;"><i>Music</i></p>
+          </div>
+          
+
+        </div>
+       
+      </div>
+
+    
+</body>
+<style>
+    element.fade-out {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  </style>
+
+  <script>
+    function redirectAbout() {
+      // Define the URL you want to redirect to
+      var aboutUrl = '../index.html'; // Replace with your desired URL
+
+      // Add a class to the body to trigger the transition effect
+      document.body.classList.add("fade-out");
+
+      // Use requestAnimationFrame for smoother animations
+      var start = null;
+
+     
+
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        var progress = timestamp - start;
+        document.body.style.opacity = 1 - progress / 700; 
+        document.body.style.transform = "scale"+ (1 - progress / 700 * 0.1) +")"; 
+        if (progress < 700) {
+          requestAnimationFrame(step);
+        } else {
+          window.location.href = aboutUrl;
+        }
+      }
+      requestAnimationFrame(step);
+    }
+  </script>
+
+
+</html>

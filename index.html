@@ -1,0 +1,1303 @@
+
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <style>
+      body {
+          display: flex;
+          margin: 0;
+          height: 100vh; 
+          width: -webkit-fill-available;
+          max-height: -webkit-fill-available;
+          
+    
+        }
+    
+        
+        
+        
+  </style>
+  
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-9a6f5ffcc359b81b95df109e4b8ce436f472f4f828fcc75227cd5266125d459b.css">
+  
+  
+<link rel="shortcut icon" type="image/x-icon" href="https://th.bing.com/th/id/R.2de82b8762186205ea8a0f12108d3e23?rik=LR4XftaSKZdZzA&amp;pid=ImgRaw&amp;r=0">
+
+<title>Chillhop</title>
+
+
+
+</head>
+
+  <body>
+    
+    <style type="text/css">
+      html {
+      overflow: hidden;
+      }
+      </style>
+  <style>
+   
+  body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      
+  }
+
+  .result-iframe {
+  
+  box-sizing: border-box; /* This includes padding and border in the element's total width and height */
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+  border: none;
+  
+  }
+</style>
+  <div id="result-iframe-wrap" role="main">
+    <iframe id="result" srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+  <meta charset=&quot;UTF-8&quot;>
+  <style>
+      html, body {
+          min-height: 100%;
+        }
+      </style>
+  
+
+    <link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://th.bing.com/th/id/R.2de82b8762186205ea8a0f12108d3e23?rik=LR4XftaSKZdZzA&amp;pid=ImgRaw&amp;r=0&quot; />
+
+    <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;Chillhop&quot;>
+
+    <link rel=&quot;shortcut icon&quot;type=&quot;image/x-icon&quot; href=&quot;https://th.bing.com/th/id/R.2de82b8762186205ea8a0f12108d3e23?rik=LR4XftaSKZdZzA&amp;pid=ImgRaw&amp;r=0&quot; />
+  
+
+    <link rel=&quot;canonical&quot; href=&quot;https://codepen.io/jinnrw/pen/ggpgVe&quot; />
+  <link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css&quot;>
+  
+  
+  
+<style>
+@import url(&quot;https://fonts.googleapis.com/css?family=Oswald:300,400,700&quot;);
+i[class^=btn] {
+  font-size: 20px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+body {
+  margin: 0;
+  background-color: #F2D7D3;
+  font-family: &quot;Oswald&quot;, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  overflow: hidden;
+  
+
+}
+
+
+
+  
+.wave-container {
+  width: 300vw;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave {
+  opacity: 1;
+  position: absolute;
+  top: 60%;
+  left: -28%;
+  background: #18DFAD;
+  width: 100%;
+  height: 300vw;
+  transform-origin: 50% 49%;
+  border-radius: 49%;
+  -webkit-animation: drift 3000ms infinite linear;
+  animation: drift 8000ms infinite linear;
+  will-change: transform;
+}
+
+.wave.-two {
+  animation: drift 9000ms infinite linear;
+  opacity: 1;
+  background: #33476a;
+  top: 60%;
+  left: -32%;
+}
+
+.wave.-three {
+  animation: drift 4000ms infinite linear;
+  opacity: 1;
+  background: #F12645;
+  top: 60%;
+  left: -36%;
+  z-index: -2;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+.bg {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 50%;
+  background-color: #33476a;
+  z-index: -1;
+}
+
+.line {
+  position: fixed;
+  left: 50vw;
+  width: 2px;
+  height: 80px;
+  top: 24vh;
+  background-color: white;
+}
+
+.text-wrap {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-wrap .text {
+  cursor: pointer;
+  position: relative;
+}
+.text-wrap span {
+  color: #fff9e1;
+  font-size: 100px;
+  font-weight: 300;
+  padding: 0 2%;
+}
+
+.main-btn_wrapper {
+  position: absolute;
+  right: -25%;
+  top: calc(50% - 18px);
+  width: 36px;
+  height: 36px;
+  background-color: #fff9e1;
+  border-radius: 50%;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom;
+}
+.main-btn_wrapper .main-btn {
+  line-height: 36px;
+}
+
+.header {
+  position: fixed;
+  left: 2.2vw;
+  top: 2.2vw;
+  margin-left: -4px;
+  margin-top: -6px;
+  color: #252120;
+  z-index: 103;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  height: 30px;
+}
+.header .burger-wrapper {
+  width: 20px;
+  height: 30px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+}
+.header .burger {
+  width: 20px;
+  height: 3px;
+  background-color: #252120;
+  position: relative;
+}
+.header .burger:before, .header .burger:after {
+  content: &quot;&quot;;
+  width: 20px;
+  height: 3px;
+  background-color: #252120;
+  position: absolute;
+  left: 0;
+}
+.header .burger:before {
+  top: -6px;
+}
+.header .burger:after {
+  top: 6px;
+  width: 14px;
+}
+.header .logo-text {
+  font-size: 20px;
+  color: #252120;
+}
+
+.back_btn {
+  cursor: pointer;
+  position: relative;
+  color: rgba(37, 33, 32, 0.4);
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  display: none;
+  opacity: 0;
+}
+.back_btn .circle {
+  background-color: rgba(37, 33, 32, 0.3);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.nav {
+  will-change: transform;
+  position: fixed;
+  background-color: #fff;
+  width: 50vw;
+  min-width: 500px;
+  height: 100vh;
+  z-index: 10;
+  box-shadow: 0 30px 80px 0 rgba(97, 45, 45, 0.25);
+  display: none;
+}
+.nav ul {
+  color: #444444;
+}
+.nav ul.nav_main {
+  margin-top: 20vh;
+}
+.nav ul.nav_sub {
+  margin-top: 3vh;
+}
+.nav ul.nav_sub a {
+  font-size: 2.4vw;
+}
+.nav ul li {
+  margin-left: 6vw;
+  margin-bottom: 0.5vw;
+  position: relative;
+}
+
+.nav_link {
+  font-size: 3.8vw;
+  cursor: pointer;
+}
+.nav_link:before {
+  content: &quot;&quot;;
+  position: absolute;
+  width: 4vw;
+  height: 2px;
+  background-color: #444444;
+  left: -12vw;
+  top: 50%;
+  transition: 0.4s;
+}
+
+.nav_divider {
+  width: 3vw;
+  height: 1px;
+  background-color: rgba(37, 33, 32, 0.12);
+  margin: 4vh 6vw;
+}
+
+.nav li .nav_link:hover:before {
+  left: -6vw;
+}
+
+.mini-player {
+  color: #252120;
+  position: fixed;
+  height: 32px;
+  right: 2.2vw;
+  top: 2.2vw;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+}
+
+.track_info_wrapper {
+  border-right: 1px solid rgba(24, 38, 69, 0.11);
+  margin-right: 23px;
+  padding-right: 30px;
+}
+.track_info_wrapper .track_info {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  opacity: 1;
+}
+.track_info_wrapper .track_info .thumb {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  background-color: #D3D6DA;
+  border-radius: 2px;
+  background-size: cover;
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg);
+}
+.track_info_wrapper .track_info .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+}
+.track_info_wrapper .track_info .artist {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: rgba(37, 33, 32, 0.7);
+}
+
+.mini-player_btn_wrapper {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.btn-switch {
+  width: 30px;
+  display: flex;
+  margin-right: 30px;
+  justify-content: center;
+}
+
+.playback_btn_wrapper .btn-switch {
+  margin-right: 0;
+}
+
+.btn-play, .btn-pause {
+  position: absolute;
+}
+
+.btn-pause {
+  display: none;
+  opacity: 0;
+}
+
+.dim {
+  will-change: opacity;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(37, 33, 32, 0.2);
+  position: fixed;
+  background-color: rgba(224, 221, 209, 0.701961);
+  z-index: 110;
+  display: none;
+  z-index: 2;
+  opacity: 0;
+}
+
+.player {
+  will-change: transform;
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 600px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0px 25px 60px 0px rgba(97, 45, 45, 0.4);
+  font-size: 14px;
+  z-index: 999;
+}
+
+.playback_wrapper {
+  height: 310px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff9e1;
+}
+
+.playback_blur {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  transform: scale(1.1);
+  filter: blur(32px);
+  opacity: 0.24;
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg);
+}
+
+.playback_thumb {
+  transition: 0.5s;
+  width: 164px;
+  height: 164px;
+  border-radius: 5px;
+  background-size: cover;
+  position: absolute;
+  margin: 35px;
+  box-shadow: 0px 12px 30px 0px rgba(97, 45, 45, 0.2);
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg);
+}
+
+.playback_info {
+  display: block;
+  position: absolute;
+  left: 164px;
+  z-index: 10;
+  margin: 42px 8px 8px 70px;
+  width: 55%;
+  min-width: 100px;
+  mix-blend-mode: color-burn;
+}
+.playback_info .title {
+  font-size: 30px;
+  display: inline;
+  color: #252120;
+}
+.playback_info .artist {
+  margin-top: 14px;
+  font-size: 16px;
+  opacity: 0.34;
+  color: #252120;
+}
+
+.playback_btn_wrapper {
+  position: absolute;
+  z-index: 10;
+  mix-blend-mode: color-burn;
+  width: 124px;
+  left: 55px;
+  top: 240px;
+  opacity: 0.6;
+  display: flex;
+  justify-content: space-between;
+}
+.playback_btn_wrapper i {
+  margin: 0;
+}
+
+.playback_timeline {
+  position: absolute;
+  width: 60%;
+  left: 234px;
+  top: 238px;
+  mix-blend-mode: color-burn;
+  color: #252120;
+}
+
+.playback_timeline_start-time, .playback_timeline_end-time {
+  font-size: 14px;
+  opacity: 0.4;
+  margin-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.playback_timeline_slider {
+  height: 24.67px;
+  position: relative;
+  cursor: pointer;
+  width: 65%;
+  margin-right: 15px;
+  opacity: 1;
+  display: inline-block;
+  vertical-align: middle;
+}
+.playback_timeline_slider .slider_base {
+  width: 100%;
+  height: 2px;
+  background-color: rgba(37, 33, 32, 0.12);
+  border-radius: 2px;
+  position: absolute;
+  top: 12px;
+}
+.playback_timeline_slider .slider_progress {
+  transform: matrix(0.15812, 0, 0, 1, 0, 0);
+  transform-origin: 0 0;
+  width: 100%;
+  height: 2px;
+  background-color: rgba(37, 33, 32, 0.5);
+  border-radius: 2px;
+  position: absolute;
+  top: 12px;
+}
+.playback_timeline_slider .slider_handle {
+  transform: matrix(1, 0, 0, 1, 37, 0);
+  width: 12px;
+  height: 12px;
+  background-color: #252120;
+  border-radius: 50%;
+  position: absolute;
+  top: 7px;
+  left: -6px;
+}
+
+.list_wrapper {
+  height: calc(100% - 310px);
+  overflow: auto;
+}
+
+.list {
+  padding: 20px 0;
+}
+.list .list_item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  height: 74px;
+  transition: 0.4s;
+}
+.list .thumb {
+  width: 50px;
+  height: 50px;
+  margin: 0 12px 0 31px;
+  border-radius: 50%;
+  position: relative;
+  opacity: 0.8;
+  background-size: cover;
+}
+.list .info {
+  max-width: 600px;
+}
+.list .info .title {
+  font-size: 15px;
+  color: #999;
+}
+.list .info .artist {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #bbb;
+}
+
+.list_item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.list_item:active {
+  transform: scale(0.98);
+}
+
+.list .list_item:nth-child(1) .thumb {
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg);
+}
+.list .list_item:nth-child(2) .thumb {
+  background-image: url(https://i.scdn.co/image/ab67616d0000b27397f5216f570ed21720314a0d);
+}
+.list .list_item:nth-child(3) .thumb {
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg);
+}
+.list .list_item:nth-child(4) .thumb {
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg);
+}
+.list .list_item:nth-child(5) .thumb {
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/07/ff35dede32321a8aa0953809812941bcf8a6bd35-1024x1024.jpg);
+}
+.list .list_item:nth-child(6) .thumb {
+  background-image: url(https://i.scdn.co/image/ab67616d0000b2739930e10b3720f20a2da74ab6);
+}
+.list .list_item:nth-child(7) .thumb {
+  background-image: url(https://i1.sndcdn.com/artworks-000180119811-wgpequ-large.jpg);
+}
+.list .list_item:nth-child(8) .thumb {
+  background-image: url(https://i1.sndcdn.com/artworks-000133986066-hf1rz6-large.jpg);
+}
+
+.selected {
+  background-color: rgba(224, 186, 171, 0.19);
+}
+.selected:hover {
+  background-color: rgba(224, 186, 171, 0.3);
+}
+.selected .info .title {
+  color: #252120;
+  font-size: 15px;
+}
+.selected .info .artist {
+  color: rgba(37, 33, 32, 0.7);
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.active {
+  display: block;
+  opacity: 1;
+}
+
+#curator {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  color: #252120;
+  display: none;
+}
+#curator .curator_title_wrapper {
+  position: fixed;
+  margin-top: 17.55vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+#curator .curator_title_wrapper span {
+  font-size: 2.16vh;
+}
+#curator .curator_title_wrapper .curator_title {
+  font-size: 7.425vh;
+}
+#curator .curator_title_wrapper .curator_line {
+  width: 30px;
+  height: 2px;
+  border-radius: 2px;
+  margin: 0 30px;
+  background-color: #252120;
+}
+
+.curator_list {
+  position: absolute;
+  text-align: center;
+  font-size: 14px;
+  width: 100vw;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+.connect_btn {
+  border-radius: 50%;
+  width: 18vh;
+  height: 18vh;
+  background-image: linear-gradient(280deg, #2f2a29 0%, #2f2a29 100%);
+  color: #f1dfdd;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.connect_btn .connect_btn_text {
+  z-index: 9;
+}
+
+.connect_btn:before {
+  position: absolute;
+  content: &quot;&quot;;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: opacity 0.5s ease-out;
+  opacity: 0;
+  background-image: linear-gradient(225deg, #ff6700 0%, #ff2df0 100%);
+  transition: 0.5s;
+}
+
+.connect_btn:hover:before {
+  opacity: 1;
+}
+
+.curator_list_content_desc {
+  position: relative;
+  pointer-events: none;
+  margin: 0 20px;
+  margin-bottom: 60px;
+}
+
+.curator_list_content {
+  padding: 0 50px;
+  white-space: nowrap;
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  margin-top: -6.6666666667vh;
+  display: flex;
+  align-items: center;
+}
+.curator_list_content .item {
+  cursor: pointer;
+  height: 25vh;
+  margin: 0 20px;
+}
+.curator_list_content .item:active {
+  transform: scale(0.95);
+}
+.curator_list_content .info {
+  opacity: 0;
+}
+.curator_list_content .info .name, .curator_list_content .info .desc {
+  font-size: 13px;
+  color: #f1dfdd;
+  clear: both;
+  position: relative;
+  padding: 0 3px 1px 3px;
+  background-color: #252120;
+  display: inline-block;
+  float: left;
+  clear: both;
+  border-radius: 3px 3px 0px 0px;
+}
+.curator_list_content .thumb {
+  border-radius: 50%;
+  width: 18vh;
+  height: 18vh;
+  background-size: cover;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.curator_list_content .item:nth-child(3) .thumb {
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/07/ef95e219a44869318b7806e9f0f794a1f9c451e4-1024x1024.jpg);
+}
+.curator_list_content .item:nth-child(4) .thumb {
+  background-image: url(https://chillhop.com/wp-content/uploads/2020/09/0255e8b8c74c90d4a27c594b3452b2daafae608d-1024x1024.jpg);
+}
+.curator_list_content .item:nth-child(5) .thumb {
+  background-image: url(https://i.scdn.co/image/ab67616d0000b27397f5216f570ed21720314a0d);
+}
+.curator_list_content .item:nth-child(6) .thumb {
+  background-image: url(https://th.bing.com/th/id/R.2de82b8762186205ea8a0f12108d3e23?rik=LR4XftaSKZdZzA&amp;pid=ImgRaw&amp;r=0);
+}
+
+
+.shadow {
+  box-shadow: 0 30px 60px 0 rgba(0, 0, 0, 0.4);
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate=&quot;no&quot;>
+  <div class=&quot;wrapper&quot;>
+  <!-- Wave bg-->
+  <div class=&quot;wave-container&quot;>
+    <div class=&quot;wave -one&quot;></div>
+    <div class=&quot;wave -two&quot;></div>
+    <div class=&quot;wave -three&quot;></div>
+  </div>
+  <div class=&quot;line&quot;></div>
+  <div class=&quot;text-wrap&quot;>
+      <div class=&quot;text&quot;><span>M</span><span>U</span><span>S</span><span>I</span><span>C</span><span></span></div>
+
+      <div class=&quot;main-btn_wrapper&quot;><i class=&quot;main-btn fa fa-play&quot; aria-hidden=&quot;true&quot;></i></div>
+    </div>
+  </div>
+  <div class=&quot;header&quot;>
+    <div class=&quot;burger-wrapper&quot;>
+      <div class=&quot;burger&quot;></div>
+    </div>
+    <div class=&quot;logo-text&quot;>ChillHop Music</div>
+    <div class=&quot;back_btn&quot;>
+      <div class=&quot;circle&quot;></div>
+      <div class=&quot;text&quot;>Back</div>
+    </div>
+  </div>
+  <div class=&quot;nav&quot;>
+    <ul class=&quot;nav_main&quot;>
+      <li> <a class=&quot;nav_link&quot;>Chillhop	</a></li>
+      <li> <a class=&quot;nav_link&quot;>R&amp;B</a></li>
+      <li> <a class=&quot;nav_link&quot;>HipHop</a></li>
+    </ul>
+    <div class=&quot;nav_divider&quot;></div>
+    <ul class=&quot;nav_sub&quot;>
+      <li id=&quot;about&quot;><a class=&quot;nav_link&quot; onclick=&quot;redirectAbout()&quot;>About</a></li>
+    </ul>
+
+  </div>
+  <div class=&quot;mini-player&quot;>
+    <div class=&quot;track_info_wrapper&quot;>
+      <div class=&quot;track_info&quot;>
+        <div class=&quot;thumb&quot;></div>
+        <div class=&quot;info&quot;>
+          <div class=&quot;title&quot;>Comes and Goes</div>
+          <div class=&quot;artist&quot;>Early</div>
+        </div>
+      </div>
+    </div>
+    <div class=&quot;mini-player_btn_wrapper&quot;><i class=&quot;btn-prev fa fa-step-backward&quot; aria-hidden=&quot;true&quot;></i>
+      <div class=&quot;btn-switch&quot;><i class=&quot;btn-play fa fa-play&quot; aria-hidden=&quot;true&quot;></i><i class=&quot;btn-pause fa fa-pause&quot; aria-hidden=&quot;true&quot;></i></div><i class=&quot;btn-next fa fa-step-forward&quot; aria-hidden=&quot;true&quot;></i><i class=&quot;btn-open-player fa fa-list&quot; aria-hidden=&quot;true&quot;></i>
+    </div>
+  </div>
+  <div class=&quot;dim&quot;></div>
+  <div class=&quot;player&quot; id=&quot;player&quot;>
+    <div class=&quot;playback_wrapper&quot;>
+      <div class=&quot;playback_blur&quot;></div>
+      <div class=&quot;playback_thumb&quot;></div>
+      <div class=&quot;playback_info&quot;>
+        <div class=&quot;title&quot;>Comes and Goes</div>
+        <div class=&quot;artist&quot;>Early</div>
+      </div>
+      <div class=&quot;playback_btn_wrapper&quot;><i class=&quot;btn-prev fa fa-step-backward&quot; aria-hidden=&quot;true&quot;></i>
+        <div class=&quot;btn-switch&quot;><i class=&quot;btn-play fa fa-play&quot; aria-hidden=&quot;true&quot;></i><i class=&quot;btn-pause fa fa-pause&quot; aria-hidden=&quot;true&quot;></i></div><i class=&quot;btn-next fa fa-step-forward&quot; aria-hidden=&quot;true&quot;></i>
+      </div>
+      <div class=&quot;playback_timeline&quot;>
+        <div class=&quot;playback_timeline_start-time&quot;>00:31</div>
+        <div class=&quot;playback_timeline_slider&quot;>
+          <div class=&quot;slider_base&quot;></div>
+          <div class=&quot;slider_progress&quot;></div>
+          <div class=&quot;slider_handle&quot;></div>
+        </div>
+        <div class=&quot;playback_timeline_end-time&quot;>03:11</div>
+      </div>
+    </div>
+    <div class=&quot;list_wrapper&quot;>
+      <ul class=&quot;list&quot;> 
+        <li class=&quot;list_item selected&quot;> 
+          <div class=&quot;thumb&quot;> </div>
+          <div class=&quot;info&quot;> 
+            <div class=&quot;title&quot;>Ai Flowers</div>
+            <div class=&quot;artist&quot;>Bruno Mars</div>
+          </div>
+        </li>
+        <li class=&quot;list_item&quot;> 
+          <div class=&quot;thumb&quot;> </div>
+          <div class=&quot;info&quot;> 
+            <div class=&quot;title&quot;>When I Was Your Man</div>
+            <div class=&quot;artist&quot;>Bruno Mars</div>
+          </div>
+        </li>
+        <li class=&quot;list_item&quot;> 
+          <div class=&quot;thumb&quot;> </div>
+          <div class=&quot;info&quot;> 
+            <div class=&quot;title&quot;>Daylight</div>
+            <div class=&quot;artist&quot;>David Kushner</div>
+          </div>
+        </li>
+        <li class=&quot;list_item&quot;> 
+          <div class=&quot;thumb&quot;> </div>
+          <div class=&quot;info&quot;> 
+            <div class=&quot;title&quot;>My Immortal</div>
+            <div class=&quot;artist&quot;>Evanescence</div>
+          </div>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  <div class=&quot;page&quot; id=&quot;curator&quot;>
+    <div class=&quot;curator_title_wrapper&quot;><span>Chill</span>
+      <div class=&quot;curator_line&quot;></div>
+      <div class=&quot;curator_title&quot;>Listeners</div>
+      <div class=&quot;curator_line&quot;></div><span>Hop</span>
+    </div>
+    <div class=&quot;curator_list&quot; >
+      <div class=&quot;curator_list_content&quot;>
+        <div class=&quot;connect_btn_wrapper item&quot;>
+          <div class=&quot;connect_btn&quot;>
+            <div class=&quot;connect_btn_text&quot;>Connect <br/>SoundCloud</div>
+          </div>
+        </div>
+        <div class=&quot;curator_list_content_desc&quot;>Or Select <br/>a Listener<br/>			</div>
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/player.html'; &quot;>  
+           <div class=&quot;thumb&quot;></div>  
+          <div class=&quot;info&quot;>
+            <div class=&quot;name&quot;>Chillhop</div>
+          </div>
+      
+        </div>
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/player.html'; &quot;>
+          <div class=&quot;thumb&quot;></div>
+          <div class=&quot;info&quot;>
+            <div class=&quot;name&quot;>R&amp;B</div>
+      
+          </div>
+        </div>
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/player.html'; &quot;>
+          <div class=&quot;thumb&quot;></div>
+          <div class=&quot;info&quot;>
+            <div class=&quot;name&quot;>HipHop</div>
+          </div>
+        </div>
+
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/player.html'; &quot;>
+          <div class=&quot;thumb&quot;></div>
+          <div class=&quot;info&quot;>
+            <div class=&quot;name&quot;>Blu-Ray</div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    element.fade-out {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  </style>
+
+  <script>
+    function redirectAbout() {
+      // Define the URL you want to redirect to
+      var aboutUrl = 'pages/about.html'; // Replace with your desired URL
+
+      // Add a class to the body to trigger the transition effect
+      document.body.classList.add(&quot;fade-out&quot;);
+
+      // Use requestAnimationFrame for smoother animations
+      var start = null;
+
+     
+
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        var progress = timestamp - start;
+        document.body.style.opacity = 1 - progress / 700; 
+        document.body.style.transform = &quot;scale(&quot; + (1 - progress / 700 * 0.1) + &quot;)&quot;; 
+        if (progress < 700) {
+          requestAnimationFrame(step);
+        } else {
+          window.location.href = aboutUrl;
+        }
+      }
+      requestAnimationFrame(step);
+    }
+  </script>
+
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TimelineMax.min.js'></script>
+      <script id=&quot;rendered-js&quot; >
+// ===== Open Nav =====
+$(&quot;.burger-wrapper&quot;).click(function () {
+
+  // ===== If Nav is not open	
+  if ($('.nav').css(&quot;display&quot;) == &quot;none&quot;) {
+    TweenMax.to(&quot;.dim&quot;, 0.5, { opacity: 1, display: 'block', ease: Power2.easeInOut });
+    TweenMax.fromTo(&quot;.nav&quot;, 0.5, { xPercent: -100 },
+    { xPercent: 0, display: 'block', ease: Expo.easeOut });
+    TweenMax.staggerFrom('.nav li', 0.5, { opacity: 0, y: 20, ease: Power2.easeInOut }, 0.1);
+
+    $('.logo-text').css({ 'opacity': '0', 'display': 'none' });
+  }
+  // ===== If Nav is open	and in Curation page
+  else if ($('.nav').css(&quot;display&quot;) == &quot;block&quot; &amp;&amp; $('#curator').css(&quot;display&quot;) == &quot;block&quot;) {
+      TweenMax.to(&quot;.dim&quot;, 0.5, { opacity: 0, display: 'none', ease: Power2.easeInOut });
+      TweenMax.to(&quot;.nav&quot;, 0.5, { xPercent: -100, display: 'none', ease: Expo.easeOut });
+      // $('.logo-text').css({'opacity': '1', 'display': 'block'});
+    } else
+
+    {
+      TweenMax.to(&quot;.dim&quot;, 0.5, { opacity: 0, display: 'none', ease: Power2.easeInOut });
+      TweenMax.to(&quot;.nav&quot;, 0.5, { xPercent: -100, display: 'none', ease: Expo.easeOut });
+      $('.logo-text').css({ 'opacity': '1', 'display': 'block' });
+    }
+
+});
+
+
+// ===== Open Player + dim on =====
+
+$(&quot;.btn-open-player, .track_info&quot;).click(function () {
+  TweenMax.to(&quot;.dim&quot;, 0.5, { opacity: 1, display: 'block', ease: Power2.easeInOut });
+  TweenMax.fromTo(&quot;#player&quot;, 0.5, { xPercent: 100 },
+  { xPercent: 0, display: 'block', ease: Expo.easeOut });
+  TweenMax.to(&quot;.mini-player&quot;, 0.5, { x: 50, ease: Expo.easeOut });
+  });
+
+$('.dim').click(function () {
+  TweenMax.to(&quot;.dim&quot;, 0.5, { opacity: 0, display: 'none', ease: Power2.easeInOut });
+  TweenMax.to(&quot;#player&quot;, 0.5, { xPercent: 100, display: 'none', ease: Expo.easeOut });
+  TweenMax.to(&quot;.nav&quot;, 0.5, { xPercent: -100, display: 'none', ease: Power2.easeInOut });
+  TweenMax.to(&quot;.mini-player&quot;, 0.5, { x: 0, ease: Expo.easeOut });
+});
+
+// ===== Mini Player - Play/Pause Switch =====
+var playlist = [
+  'music/flowers-audio-ai.mp3',
+  'music/when-i-was-your-man.mp3',
+  'music/daylight.mp3',
+  'music/my-immortal-official-music-video.mp3',
+];
+var currentSongIndex = 0;
+var audio = new Audio(playlist[currentSongIndex]);
+
+$('.btn-play').click(function () {
+  play();
+});
+
+$('.btn-pause').click(function () {
+  pause();
+});
+
+function play() {
+  TweenMax.to($('.btn-play'), 0.2, {
+      x: 20,
+      opacity: 0,
+      scale: 0.3,
+      display: 'none',
+      ease: Power2.easeInOut
+  });
+  TweenMax.fromTo($('.btn-pause'), 0.2, {
+      x: -20,
+      opacity: 0,
+      scale: 0.3,
+      display: 'none'
+  }, {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      display: 'block',
+      ease: Power2.easeInOut
+  });
+  audio.play();
+}
+
+function pause() {
+  TweenMax.to($('.btn-pause'), 0.2, {
+      x: 20,
+      opacity: 0,
+      display: 'none',
+      scale: 0.3,
+      ease: Power2.easeInOut
+  });
+  TweenMax.fromTo($('.btn-play'), 0.2, {
+      x: -20,
+      opacity: 0,
+      scale: 0.3,
+      display: 'none'
+  }, {
+      x: 0,
+      opacity: 1,
+      display: 'block',
+      scale: 1,
+      ease: Power2.easeInOut
+  });
+  audio.pause();
+}
+
+audio.addEventListener('ended', function () {
+  playNextSong();
+});
+
+function playNextSong() {
+  currentSongIndex++;
+  if (currentSongIndex >= playlist.length) {
+      currentSongIndex = 0; // Restart the playlist if reached the end
+  }
+  audio.src = playlist[currentSongIndex];
+  play();
+}
+
+
+
+// ===== HoverIn/HoverOut Flash Effect =====
+
+$('.track_info').hover(function () {
+
+  TweenMax.fromTo($(this), 0.5, { opacity: 0.5, ease: Power2.easeInOut },
+  { opacity: 1 });},
+function () {
+  $(this).css(&quot;opacity&quot;, &quot;1&quot;);
+});
+
+$('.burger-wrapper, .logo-text, .back_btn').hover(function () {
+
+  TweenMax.fromTo($(this), 0.5, { opacity: 0.5, ease: Power2.easeInOut },
+  { opacity: 1 });},
+function () {
+  $(this).css(&quot;opacity&quot;, &quot;1&quot;);
+});
+
+$('.btn-open-player').hover(function () {
+
+  TweenMax.fromTo($(this), 0.5, { opacity: 0.5, ease: Power2.easeInOut },
+  { opacity: 1 });},
+function () {
+  $(this).css(&quot;opacity&quot;, &quot;1&quot;);
+});
+
+$('.nav a').hover(function () {
+
+  TweenMax.fromTo($(this), 0.5, { opacity: 0.5, ease: Power2.easeInOut },
+  { opacity: 1 });},
+function () {
+  $(this).css(&quot;opacity&quot;, &quot;1&quot;);
+});
+
+// ===== Player - List Items =====
+$('.list_item').click(function () {
+  $('.list_item').removeClass('selected');
+  $(this).addClass('selected');
+});
+
+
+// ===== Main Play Button - Hover =====
+
+$('.text-wrap .text').hover(function () {
+  TweenMax.to($('.main-btn_wrapper'), 0.5, { opacity: 1, display: 'block', position: 'absolute', scale: 1, ease: Elastic.easeOut.config(1, 0.75) }),
+  TweenMax.to($('.line'), 0.5, { css: { scaleY: 0.6, transformOrigin: &quot;center center&quot; }, ease: Expo.easeOut });},
+
+function () {
+  TweenMax.to($('.main-btn_wrapper'), 0.5, { opacity: 0, display: 'none', scale: 0, ease: Elastic.easeOut.config(1, 0.75) }),
+  TweenMax.to($('.line'), 0.5, { css: { scaleY: 1, transformOrigin: &quot;center center&quot; }, ease: Expo.easeOut });
+});
+
+
+// ===== Curation Page  =====
+// ===== List  =====
+$('.item').hover(function () {
+  TweenMax.to($(this), 0.5, { y: -30, ease: Power2.easeInOut }),
+  $(this).children('.thumb').addClass('shadow'),
+  $(this).children('.connect_btn').addClass('shadow'),
+
+  TweenMax.to($(this).children('.info'), 0.5, { opacity: 1, ease: Power2.easeInOut });
+},
+
+function () {
+  TweenMax.to($(this), 0.5, { y: 0, ease: Power2.easeInOut }),
+  $(this).children('.thumb').removeClass('shadow'),
+  $(this).children('.connect_btn').removeClass('shadow'),
+
+  TweenMax.to($(this).children('.info'), 0.5, { opacity: 0, ease: Power2.easeInOut });
+});
+
+
+// ===== Home Page to Curation Page Transition  =====
+// ===== Main Play Button Activate =====
+
+$('.text-wrap .text').click(function () {
+
+  var homeToMain = new TimelineMax({});
+
+  // Hide
+  $('.logo-text').css('display', 'none'),
+  homeToMain.to($('.line, .text-wrap'), 0.5, { display: 'none', opacity: 0, y: -20, ease: Power2.easeInOut }, 0),
+
+  // Background down
+  homeToMain.to($('.wave-container'), 1, { yPercent: 30, ease: Power2.easeInOut }, 0),
+
+  // Show
+  $('#curator').css('display', 'block'),
+  homeToMain.fromTo($('.back_btn'), 0.8, { x: 15 },
+  { display: 'flex', opacity: 1, x: 0, ease: Power2.easeInOut }, 1),
+
+  homeToMain.fromTo($('.curator_title_wrapper'), 0.8, { opacity: 0, x: 30 },
+  { opacity: 1, x: 0, ease: Power2.easeInOut }, 1),
+
+  homeToMain.fromTo($('.curator_list'), 0.8, { opacity: 0, display: 'none', x: 30 },
+  { opacity: 1, x: 0, display: 'block', ease: Power2.easeInOut }, 1.2);
+
+});
+
+
+// ===== Curation Page to Playlist Page Transition  =====
+// ===== Item Activate =====
+$('.item').click(function () {
+  var mainToPlaylist = new TimelineMax({});
+
+  // Hide
+  mainToPlaylist.to($('#curator'), 0.8, { display: 'none', opacity: 0, scale: 1.1, ease: Power2.easeInOut }, 0);
+
+  // mainToPlaylist.fromTo($('.curator_list'), 0.5, {opacity: 1, display: 'block', x: 0},
+  // 									{opacity: 0, x: 30, display: 'none', ease: Power2.easeInOut}, 0.5),
+
+
+
+
+});
+
+// ===== Back Button Activate =====
+
+$('.back_btn').click(function () {
+  // ===== From Playlist(3) to Main(2)
+  if ($('#curator').css(&quot;display&quot;) == &quot;none&quot;) {
+    var playlistToMain = new TimelineMax({});
+
+    // Hide
+    playlistToMain.fromTo($('#curator'), 0.8, { display: 'none', opacity: 0, scale: 1.1 },
+    { display: 'block', opacity: 1, scale: 1, ease: Power2.easeInOut }, 0);
+  }
+
+  // From Main(2) to Home(1)
+  else {
+      var mainToHome = new TimelineMax({});
+      // Hide
+      mainToHome.fromTo($('.curator_title_wrapper'), 0.5, { opacity: 1, x: 0 },
+      { opacity: 0, x: 30, ease: Power2.easeInOut }, 0.2),
+
+      mainToHome.fromTo($('.curator_list'), 0.5, { opacity: 1, display: 'block', x: 0 },
+      { opacity: 0, x: 30, display: 'none', ease: Power2.easeInOut }, 0.5),
+
+
+      mainToHome.to($('.back_btn'), 0.5, { display: 'none', opacity: 0, x: 15, ease: Power2.easeInOut }, 0.5),
+
+      mainToHome.to($('#curator'), 0, { display: 'none', ease: Power2.easeInOut }, 1),
+
+      // Background Up
+      mainToHome.to($('.wave-container'), 1, { yPercent: 0, ease: Power2.easeInOut }, 1),
+
+      // 	Show
+      mainToHome.to($('.text-wrap'), 0.5, { display: 'flex', opacity: 1, y: 0, ease: Power2.easeInOut }, 1.2),
+
+      mainToHome.to($('.logo-text, .line'), 0.5, { display: 'block', opacity: 1, y: 0, ease: Power2.easeInOut }, 1.2),
+
+      // 	Force to redraw by using y translate
+      mainToHome.fromTo($('.text-wrap .text'), 0.1, { y: 0.1, position: 'absolute' },
+      { y: 0, position: 'relative', ease: Power2.easeInOut }, 1.3);
+      // $('.text-wrap .text').css('position', 'relative');
+    }
+});
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>
+"sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; ambient-light-sensor; camera; display-capture; encrypted-media; geolocation; gyroscope; microphone; midi; payment; vr; web-share" allowtransparency="true" allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+  </div>
+
+
+
+
+<grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></body></html>
