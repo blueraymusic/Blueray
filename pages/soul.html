@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+ 
+
+<head>
+  <title>Chill Music</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../video/picture.jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    #video-background video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(2px); /* Apply blur effect */
+    }
+
+    #music-indicator {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 130px;
+      color: #ffffff;
+      animation: pulse-animation 3s infinite;
+    }
+
+    #text-container {
+      position: fixed;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      padding-right: 50px;
+      text-align: right;
+      opacity: 0;
+      animation: slide-in-animation 1s ease-in forwards;
+    }
+
+    #text-container p {
+      font-size: 38px;
+      letter-spacing: 7px;
+      margin: 0;
+      padding: 0;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 400;
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+    }
+
+    .info-title-separator {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 18px;
+    }
+
+    @keyframes pulse-animation {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes slide-in-animation {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <div id="video-background">
+    <video autoplay muted loop id="video">
+      <source src="../video/Clipchamp.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <style>
+    #header {
+        color: white;
+        margin: 30px;
+        font-size: 35px;
+        letter-spacing: 7px;
+        font-family: "Montserrat", sans-serif;
+        text-transform: uppercase;
+        color: white;
+        font-weight: 400;
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.7);
+        animation: slide-in 1.5s ease-in forwards;
+        transform: translateY(-50%);
+    }
+    @keyframes slide-in {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    </style>
+    
+  <pre><div id ='header'>             </div></pre>
+<!-- For the music note
+    <div id="music-indicator">
+    <i class="fas fa-music"></i>
+  </div>
+ -->
+  <div id="text-container">
+    <pre><p class="h1 glow">Music  </p></pre>
+    <div class="info-title-separator"></div>
+    <span style="color:white;"><pre>By Goat                   </pre></span>
+  </div>
+
+  <div id="line"></div>
+</body>
+
+<footer>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+    html, body {
+      position: relative;
+      min-height: 100vh;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-top: 0px;
+      margin-right: 130px;
+    }
+    
+    .player {
+      position: relative;
+    }
+    .player .info {
+      position: absolute;
+      height: 60px;
+      top: 0;
+      opacity: 0;
+      left: 10px;
+      right: 10px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 5px 15px 5px 110px;
+      border-radius: 15px;
+      transition: all 0.5s ease;
+    }
+    .player .info .artist,
+    .player .info .name {
+      display: block;
+    }
+    .player .info .artist {
+      color: #222;
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+    .player .info .name {
+      color: #2f2e2e;
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+    .player .info .progress-bar {
+      background-color: #dddddd2e;
+      height: 2px;
+      width: 100%;
+      position: relative;
+    }
+    .player .info .progress-bar .bar {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background-color: red;
+      width: 10%;
+      transition: all 0.2s ease;
+    }
+    .player .info.active {
+      top: -60px;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+    .player .control-panel {
+      position: relative;
+      background-color: #ffffff77;
+      border-radius: 15px;
+      width: 300px;
+      height: 80px;
+      z-index: 5;
+      box-shadow: 0px 20px 20px 5px rgba(132, 132, 132, 0.3);
+    }
+    .player .control-panel .album-art {
+        position: absolute;
+        left: 20px;
+        top: -15px;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0);
+        transform: scale(1);
+        transition: all 0.5s ease;
+      }
+      
+      .player .control-panel .album-art::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        border-radius: 50%;
+        z-index: 5;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+      }
+      
+      .player .control-panel .album-art::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+      }
+      
+      .player .control-panel.active .album-art {
+        box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+        transform: scale(1.2);
+        transition: all 0.5s ease;
+      }
+      
+      .player .control-panel.active .album-art::before {
+        animation: rotation 3s infinite linear;
+        -webkit-animation: rotation 3s infinite linear;
+        animation-fill-mode: forwards;
+      }
+      
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+    .player .control-panel .controls {
+      display: flex;
+      justify-content: flex-end;
+      height: 80px;
+      padding: 0 15px;
+    }
+    .player .control-panel .controls .prev,
+    .player .control-panel .controls .play,
+    .player .control-panel .controls .next {
+      width: 55px;
+      height: auto;
+      border-radius: 10px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      margin: 5px 0;
+      background-color: #fff0;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      -webkit-transition: background-color 0.3s ease;
+    }
+    .player .control-panel .controls .prev:hover,
+    .player .control-panel .controls .play:hover,
+    .player .control-panel .controls .next:hover {
+      background-color: #eeeeee57;
+      transition: background-color 0.3s ease;
+      -webkit-transition: background-color 0.3s ease;
+    }
+    .player .control-panel .controls .prev {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI1MC40ODggMjUwLjQ4OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjUwLjQ4OCAyNTAuNDg4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlByZXZpb3VzX3RyYWNrIj4KCTxwYXRoIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDsiIGQ9Ik0yMzcuNDg0LDIyLjU4N2MtMy4yNjYsMC03LjU5MS0wLjQwMS0xMS4wNzIsMi4wMDVsLTkyLjI2NCw3Ny45MVYzNy4yNTIgICBjMC0yLjUwNywwLjA1Ny0xNC42NjYtMTMuMDA0LTE0LjY2NmMtMy4yNjUsMC03LjU5LTAuNDAxLTExLjA3MiwyLjAwNUw4LjEwNywxMTAuNjkzYy05LjY2OSw2LjY3NC03Ljk5NywxNC41NTEtNy45OTcsMTQuNTUxICAgcy0xLjY3MSw3Ljg3OCw3Ljk5NywxNC41NTFsMTAxLjk2NSw4Ni4xMDJjMy40ODIsMi40MDUsNy44MDcsMi4wMDQsMTEuMDcyLDIuMDA0YzEzLjA2MiwwLDEzLjAwNC0xMS43LDEzLjAwNC0xNC42NjZ2LTY1LjI0OSAgIGw5Mi4yNjQsNzcuOTExYzMuNDgyLDIuNDA1LDcuODA3LDIuMDA0LDExLjA3MiwyLjAwNGMxMy4wNjIsMCwxMy4wMDQtMTEuNywxMy4wMDQtMTQuNjY2VjM3LjI1MiAgIEMyNTAuNDg4LDM0Ljc0NiwyNTAuNTQ2LDIyLjU4NywyMzcuNDg0LDIyLjU4N3oiIGZpbGw9IiNjMmM2Y2YiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    }
+    .player .control-panel .controls .play {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIzMi4xNTMgMjMyLjE1MyIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjMyLjE1MyAyMzIuMTUzOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlBsYXkiPgoJPHBhdGggc3R5bGU9ImZpbGwtcnVsZTpldmVub2RkO2NsaXAtcnVsZTpldmVub2RkOyIgZD0iTTIwMy43OTEsOTkuNjI4TDQ5LjMwNywyLjI5NGMtNC41NjctMi43MTktMTAuMjM4LTIuMjY2LTE0LjUyMS0yLjI2NiAgIGMtMTcuMTMyLDAtMTcuMDU2LDEzLjIyNy0xNy4wNTYsMTYuNTc4djE5OC45NGMwLDIuODMzLTAuMDc1LDE2LjU3OSwxNy4wNTYsMTYuNTc5YzQuMjgzLDAsOS45NTUsMC40NTEsMTQuNTIxLTIuMjY3ICAgbDE1NC40ODMtOTcuMzMzYzEyLjY4LTcuNTQ1LDEwLjQ4OS0xNi40NDksMTAuNDg5LTE2LjQ0OVMyMTYuNDcxLDEwNy4xNzIsMjAzLjc5MSw5OS42Mjh6IiBmaWxsPSIjYzJjNmNmIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+    }
+    .player .control-panel .controls .next {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI1MC40ODggMjUwLjQ4OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjUwLjQ4OCAyNTAuNDg4OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9Ik5leHRfdHJhY2tfMiI+Cgk8cGF0aCBzdHlsZT0iZmlsbC1ydWxlOmV2ZW5vZGQ7Y2xpcC1ydWxlOmV2ZW5vZGQ7IiBkPSJNMjQyLjM4MSwxMTAuNjkzTDE0MC40MTUsMjQuNTkxYy0zLjQ4LTIuNDA2LTcuODA1LTIuMDA1LTExLjA3MS0yLjAwNSAgIGMtMTMuMDYxLDAtMTMuMDAzLDExLjctMTMuMDAzLDE0LjY2NnY2NS4yNDlsLTkyLjI2NS03Ny45MWMtMy40ODItMi40MDYtNy44MDctMi4wMDUtMTEuMDcyLTIuMDA1ICAgQy0wLjA1NywyMi41ODcsMCwzNC4yODcsMCwzNy4yNTJ2MTc1Ljk4M2MwLDIuNTA3LTAuMDU3LDE0LjY2NiwxMy4wMDQsMTQuNjY2YzMuMjY1LDAsNy41OSwwLjQwMSwxMS4wNzItMi4wMDVsOTIuMjY1LTc3LjkxICAgdjY1LjI0OWMwLDIuNTA3LTAuMDU4LDE0LjY2NiwxMy4wMDMsMTQuNjY2YzMuMjY2LDAsNy41OTEsMC40MDEsMTEuMDcxLTIuMDA1bDEwMS45NjYtODYuMTAxICAgYzkuNjY4LTYuNjc1LDcuOTk3LTE0LjU1MSw3Ljk5Ny0xNC41NTFTMjUyLjA0OSwxMTcuMzY3LDI0Mi4zODEsMTEwLjY5M3oiIGZpbGw9IiNjMmM2Y2YiLz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+    }
+    .player .control-panel.active .controls .play {
+      background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDIzMi42NzkgMjMyLjY3OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjMyLjY3OSAyMzIuNjc5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlBhdXNlIj4KCTxwYXRoIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDsiIGQ9Ik04MC41NDMsMEgzNS43OTdjLTkuODg1LDAtMTcuODk4LDguMDE0LTE3Ljg5OCwxNy44OTh2MTk2Ljg4MyAgIGMwLDkuODg1LDguMDEzLDE3Ljg5OCwxNy44OTgsMTcuODk4aDQ0Ljc0NmM5Ljg4NSwwLDE3Ljg5OC04LjAxMywxNy44OTgtMTcuODk4VjE3Ljg5OEM5OC40NCw4LjAxNCw5MC40MjcsMCw4MC41NDMsMHogTTE5Ni44ODIsMCAgIGgtNDQuNzQ2Yy05Ljg4NiwwLTE3Ljg5OSw4LjAxNC0xNy44OTksMTcuODk4djE5Ni44ODNjMCw5Ljg4NSw4LjAxMywxNy44OTgsMTcuODk5LDE3Ljg5OGg0NC43NDYgICBjOS44ODUsMCwxNy44OTgtOC4wMTMsMTcuODk4LTE3Ljg5OFYxNy44OThDMjE0Ljc4MSw4LjAxNCwyMDYuNzY3LDAsMTk2Ljg4MiwweiIgZmlsbD0iI2MyYzZjZiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=);
+    }
+    </style>
+    
+    <div class="player">
+        <div id="info" class="info">
+            <span class="artist" id="artist">Daylight</span>
+            <span class="name" id="name">Aiguille</span>
+            <div class="progress-bar">
+                <div class="bar"></div>
+            </div>
+        </div>
+        <div id="control-panel" class="control-panel">
+            <img id="img" class="album-art" src="https://chillhop.com/assets/img/livestreams/intro/1_Welcome.jpg">
+            <div id="image" class="album-art"></div>
+            <div class="controls">
+              <div id="prev" class="prev"></div>
+              <div id="play" class="play"></div>
+              <div class="next" id="next"></div>
+            </div>
+          </div>
+    </div>
+    <script>
+            class musicPlayer {
+              constructor() {
+                this.isPlaying = false;
+                this.currentTrackIndex = 0;
+        
+                this.play = this.play.bind(this);
+                this.next = this.next.bind(this);
+                this.prev = this.prev.bind(this);
+        
+                this.prevBtn = document.querySelector('.prev');
+                this.prevBtn.addEventListener('click', this.prev);
+        
+                this.nextBtn = document.querySelector('.next');
+                this.nextBtn.addEventListener('click', this.next);
+        
+                this.playBtn = document.getElementById('play');
+                this.playBtn.addEventListener('click', this.play);
+        
+                this.controlPanel = document.getElementById('control-panel');
+                this.infoBar = document.getElementById('info');
+                this.audio = new Audio();
+
+
+                //listening to the music
+                this.audio.addEventListener('ended', () => {
+                    this.next();
+                  });
+        
+                this.playlist = [
+                  {
+                    path: '../music/daylight.mp3',
+                    name: 'Daylight',
+                    artist: 'David Kushner',
+                    image: '../video/picture.jpg',
+                  },
+                  {
+                    path: '../music/my-immortal-official-music-video.mp3',
+                    name: 'My Immortal',
+                    artist: 'Evanescence',
+                    image: '../video/picture2.jpg',
+                  },
+                  {
+                    path: '../music/When-I-Was-Your-Man.mp3',
+                    name: 'When I Was Your Man',
+                    artist: 'Bruno Mars',
+                    image: '../video/picture3.jpg',
+                  },
+                  {
+                    path: '../music/lovely.mp3',
+                    name: 'Lovely',
+                    artist: 'Billie Eilish',
+                    image: 'https://i.scdn.co/image/ab67616d0000b2739930e10b3720f20a2da74ab6',
+                  },
+                  {
+                    path: '../music/control.mp3',
+                    name: 'Lose Control',
+                    artist: 'Zoe Wees',
+                    image: 'https://cms.chillhop.com/media/78380/squarel33c240797e45d3173b0673b4c54becac6c792fec.jpg',
+                  },
+                  {
+                    path: '../music/redemption.mp3',
+                    name: 'Redemption',
+                    artist: 'Bob Marley',
+                    image: 'https://i.scdn.co/image/ab67616d0000b27397f5216f570ed21720314a0d',
+                  },
+                ];
+        
+                this.songNameElement = document.getElementById('artist');
+                this.songArtistElement = document.getElementById('name');
+                this.albumArtElement = document.getElementById('img');
+        
+                this.loadCurrentTrack(); // Load initial track
+              }
+        
+              play() {
+                if (this.isPlaying) {
+                  this.audio.pause();
+                  this.isPlaying = false;
+                } else {
+                  this.audio.play();
+                  this.isPlaying = true;
+                }
+        
+                this.updateUI();
+              }
+        
+              next() {
+                this.currentTrackIndex = (this.currentTrackIndex + 1) % this.playlist.length;
+                this.loadCurrentTrack();
+                this.audio.play();
+                this.isPlaying = true;
+                this.updateUI();
+              }
+        
+              prev() {
+                if (this.audio.currentTime > 3) {
+                  this.audio.currentTime = 0;
+                } else {
+                  this.currentTrackIndex = (this.currentTrackIndex - 1 + this.playlist.length) % this.playlist.length;
+                  this.loadCurrentTrack();
+                }
+              
+                this.audio.play();
+                this.isPlaying = true;
+                this.updateUI();
+              }
+        
+              loadCurrentTrack() {
+                const currentTrack = this.playlist[this.currentTrackIndex];
+                this.audio.src = currentTrack.path;
+                this.songNameElement.textContent = currentTrack.name;
+                this.songArtistElement.textContent = currentTrack.artist;
+                this.albumArtElement.src = currentTrack.image;
+              }
+
+              updateUI() {
+                if (this.isPlaying) {
+                  this.playBtn.classList.add('active');
+                  this.controlPanel.classList.add('active');
+                  this.infoBar.classList.add('active');
+                } else {
+                  this.playBtn.classList.remove('active');
+                  this.controlPanel.classList.remove('active');
+                  this.infoBar.classList.remove('active');
+                }
+              }
+            }
+        
+            const newMusicPlayer = new musicPlayer();
+      </script>
+    
+    
+</footer>
+</html>
+
+
