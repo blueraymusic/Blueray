@@ -13,14 +13,17 @@ BluerayMusic is a music-focused website hosted on GitHub Pages, dedicated to bri
 - **Music Blog:** Read articles and reviews on music trends and discoveries.
 
 ## Live Demo
-
 Check out the live demo of BluerayMusic: [BluerayMusic](https://blueraymusic.github.io/Blueray/)
+<img width="1418" alt="Capture d’écran 2025-02-16 à 21 28 26" src="https://github.com/user-attachments/assets/c29d78d3-10cf-41f4-916b-444140f7083a" />
 
 ## Technologies Used
 
 - HTML
 - CSS
 - JAVASCRIPT
+
+## Preview
+<img width="1411" alt="Capture d’écran 2025-02-16 à 21 28 40" src="https://github.com/user-attachments/assets/51d5ff63-9650-4dd8-ab84-1991506c08ec" />
 
 ## Getting Started
 
