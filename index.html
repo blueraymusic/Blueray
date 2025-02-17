@@ -414,6 +414,9 @@ body {
   position: absolute;
 }
 
+
+
+
 .btn-pause {
   display: none;
   opacity: 0;
@@ -511,7 +514,7 @@ body {
   justify-content: space-between;
 }
 .playback_btn_wrapper i {
-  margin: 0;
+  margin-left: 125px;
 }
 
 .playback_timeline {
@@ -795,6 +798,9 @@ body {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1XTFEATMX4CZLEJRegYwRnw7-5xoStwn3Wg&s);
 }
 .curator_list_content .item:nth-child(6) .thumb {
+  background-image: url(https://avatars.yandex.net/get-music-content/5234847/1f075736.a.16665066-1/m1000x1000?webp=false);
+}
+.curator_list_content .item:nth-child(7) .thumb {
   background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-UXJaAPqQgPwWuy2jAvJDoaT2pa1VEvMilw&s);
 }
 
@@ -814,6 +820,164 @@ body {
 
 <body translate=&quot;no&quot;>
   <div class=&quot;wrapper&quot;>
+
+
+
+
+    <div class=&quot;search_modal_backdrop&quot; id=&quot;modal&quot; style=&quot;display: none;&quot;>
+      <!-- MODAL CONTENT -->
+      <div class=&quot;search_modal&quot;>
+          <h2>Find Your Song</h2>
+          <input type=&quot;text&quot; id=&quot;song_input&quot; placeholder=&quot;Enter song name...&quot; />
+          <button id=&quot;search_song&quot;>Search</button>
+      </div>
+  </div>
+
+    <style>
+        /* Enhanced Glassmorphism Style */
+        .search_modal_backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(12px) saturate(180%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+      
+        .search_modal {
+            width: min(90%, 440px);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px) saturate(200%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            transform: translateY(0);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+      
+        .search_modal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, 
+                rgba(255, 103, 0, 0.1) 0%, 
+                rgba(255, 45, 240, 0.15) 100%);
+            z-index: -1;
+        }
+      
+        .search_modal h2 {
+            color: #fff;
+            font-size: 2rem;
+            margin-bottom: 1.8rem;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+      
+        .search_modal input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+      
+        .search_modal input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 300;
+        }
+      
+        .search_modal input:focus {
+            border-color: rgba(255, 255, 255, 0.8);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+      
+        .search_modal button {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(225deg, 
+                #ff6700 0%, 
+                #ff2df0 100%);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+      
+        .search_modal button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(225deg, 
+                rgba(255, 255, 255, 0.15) 0%, 
+                rgba(255, 255, 255, 0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+      
+        .search_modal button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 45, 240, 0.3);
+        }
+      
+        .search_modal button:hover::after {
+            opacity: 1;
+        }
+      
+        @media (max-width: 480px) {
+            .search_modal {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+            
+            .search_modal h2 {
+                font-size: 1.75rem;
+                margin-bottom: 1.2rem;
+            }
+            
+            .search_modal input {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.95rem;
+            }
+            
+            .search_modal button {
+                padding: 0.9rem;
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+
+
+
+
+
+
+    
   <!-- Wave bg-->
   <div class=&quot;wave-container&quot;>
     <div class=&quot;wave -one&quot;></div>
@@ -839,13 +1003,13 @@ body {
   </div>
   <div class=&quot;nav&quot;>
     <ul class=&quot;nav_main&quot;>
-      <li> <a class=&quot;nav_link&quot;>Chillhop	</a></li>
-      <li> <a class=&quot;nav_link&quot;>R&amp;B</a></li>
-      <li> <a class=&quot;nav_link&quot;>HipHop</a></li>
+      <li> <a class=&quot;nav_link&quot;  onclick=&quot;window.location.href='pages/soul.html'&quot; >Chillhop</a></li>
+      <li> <a class=&quot;nav_link&quot; onclick=&quot;window.location.href='pages/afro.html'&quot; >Afro</a></li>
+      <li> <a class=&quot;nav_link&quot;  onclick= &quot;alert('Not Available Yet !!')&quot;  >HipHop</a></li>
     </ul>
     <div class=&quot;nav_divider&quot;></div>
     <ul class=&quot;nav_sub&quot;>
-      <li id=&quot;about&quot;><a class=&quot;nav_link&quot; onclick=&quot;redirectAbout()&quot;>About</a></li>
+      <li id=&quot;about&quot;><a class=&quot;nav_link&quot;  onclick=&quot;window.location.href='#'&quot;>ChillHop</a></li>
     </ul>
 
   </div>
@@ -859,8 +1023,8 @@ body {
         </div>
       </div>
     </div>
-    <div class=&quot;mini-player_btn_wrapper&quot;><i class=&quot;btn-prev fa fa-step-backward&quot; aria-hidden=&quot;true&quot;></i>
-      <div class=&quot;btn-switch&quot;><i class=&quot;btn-play fa fa-play&quot; aria-hidden=&quot;true&quot;></i><i class=&quot;btn-pause fa fa-pause&quot; aria-hidden=&quot;true&quot;></i></div><i class=&quot;btn-next fa fa-step-forward&quot; aria-hidden=&quot;true&quot;></i><i class=&quot;btn-open-player fa fa-list&quot; aria-hidden=&quot;true&quot;></i>
+    <div class=&quot;mini-player_btn_wrapper&quot;>
+      <div class=&quot;btn-switch&quot;><i class=&quot;btn-play fa fa-play&quot; aria-hidden=&quot;true&quot;></i><i class=&quot;btn-pause fa fa-pause&quot; aria-hidden=&quot;true&quot;></i></div><i class=&quot;btn-open-player fa fa-list&quot; aria-hidden=&quot;true&quot;></i>
     </div>
   </div>
   <div class=&quot;dim&quot;></div>
@@ -872,8 +1036,12 @@ body {
         <div class=&quot;title&quot;>Comes and Goes</div>
         <div class=&quot;artist&quot;>Early</div>
       </div>
-      <div class=&quot;playback_btn_wrapper&quot;><i class=&quot;btn-prev fa fa-step-backward&quot; aria-hidden=&quot;true&quot;></i>
-        <div class=&quot;btn-switch&quot;><i class=&quot;btn-play fa fa-play&quot; aria-hidden=&quot;true&quot;></i><i class=&quot;btn-pause fa fa-pause&quot; aria-hidden=&quot;true&quot;></i></div><i class=&quot;btn-next fa fa-step-forward&quot; aria-hidden=&quot;true&quot;></i>
+      <div class=&quot;playback_btn_wrapper&quot;>
+        
+        <div class=&quot;btn-switch&quot;>
+          <i class=&quot;btn-play fa fa-play&quot; aria-hidden=&quot;true&quot;></i>
+          <i class=&quot;btn-pause fa fa-pause&quot; aria-hidden=&quot;true&quot;></i>
+        </div>
       </div>
       <div class=&quot;playback_timeline&quot;>
         <div class=&quot;playback_timeline_start-time&quot;>00:31</div>
@@ -919,6 +1087,9 @@ body {
       </ul>
     </div>
   </div>
+  
+  
+
   <div class=&quot;page&quot; id=&quot;curator&quot;>
     <div class=&quot;curator_title_wrapper&quot;><span>Chill</span>
       <div class=&quot;curator_line&quot;></div>
@@ -928,33 +1099,96 @@ body {
     <div class=&quot;curator_list&quot; >
       <div class=&quot;curator_list_content&quot;>
         <div class=&quot;connect_btn_wrapper item&quot;>
-          <div class=&quot;connect_btn&quot;>
-            <div class=&quot;connect_btn_text&quot;>Connect <br/>SoundCloud</div>
+
+      
+          
+          <div class=&quot;connect_btn&quot; onclick=&quot;toggleModal()&quot;>
+            <div class=&quot;connect_btn_text&quot; >ChillSound <br/>Find a Song</div>
+            <script>
+              function toggleModal() {
+                const modal = document.getElementById('modal');
+                if (modal.style.display === 'none' || !modal.style.display) {
+                    modal.style.display = 'flex';
+                    setTimeout(() => {
+                        modal.style.opacity = '1';
+                        modal.style.visibility = 'visible';
+                        
+                        // Add click listener for backdrop
+                        modal.addEventListener('click', closeOnBackdropClick);
+                    }, 10);
+                } else {
+                    closeModal();
+                }
+            }
+            
+            function closeModal() {
+                const modal = document.getElementById('modal');
+                modal.style.opacity = '0';
+                modal.style.visibility = 'hidden';
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    // Remove backdrop click listener
+                    modal.removeEventListener('click', closeOnBackdropClick);
+                }, 300);
+            }
+            
+            function closeOnBackdropClick(event) {
+                // Check if click is directly on backdrop (not children)
+                if (event.target === document.getElementById('modal')) {
+                    closeModal();
+                }
+            }
+            
+          </script>
+
+          <style>
+            .search_modal {
+              pointer-events: auto; /* Allow interactions with modal content */
+          }
+          
+          .search_modal_backdrop {
+              pointer-events: auto; /* Enable click detection */
+          }
+          
+          .search_modal * {
+              pointer-events: auto; /* Allow interactions with all modal elements */
+          }
+          </style>
+
+
+
           </div>
         </div>
         <div class=&quot;curator_list_content_desc&quot;>Or Select <br/>a Listener<br/>			</div>
-        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/player.html'; &quot;>  
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/soul.html'; &quot;>  
            <div class=&quot;thumb&quot;></div>  
           <div class=&quot;info&quot;>
-            <div class=&quot;name&quot;>Chillhop</div>
+            <div class=&quot;name&quot;>Soul</div>
           </div>
       
         </div>
-        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/player.html'; &quot;>
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/reggae.html'; &quot;>
           <div class=&quot;thumb&quot;></div>
           <div class=&quot;info&quot;>
-            <div class=&quot;name&quot;>R&amp;B</div>
+            <div class=&quot;name&quot;>Reggae</div>
       
           </div>
         </div>
-        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/player.html'; &quot;>
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/hiphop.html'; &quot;>  <!-- At the moment hiphop.html is not live -->
           <div class=&quot;thumb&quot;></div>
           <div class=&quot;info&quot;>
             <div class=&quot;name&quot;>HipHop</div>
           </div>
         </div>
 
-        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/player.html'; &quot;>
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/afro.html'; &quot;>
+          <div class=&quot;thumb&quot;></div>
+          <div class=&quot;info&quot;>
+            <div class=&quot;name&quot;>AfroMusic</div>
+          </div>
+        </div>
+
+        <div class=&quot;item&quot; onclick=&quot;window.location.href='pages/soul.html'; &quot;>
           <div class=&quot;thumb&quot;></div>
           <div class=&quot;info&quot;>
             <div class=&quot;name&quot;>Blu-Ray</div>
@@ -973,33 +1207,7 @@ body {
     }
   </style>
 
-  <script>
-    function redirectAbout() {
-      // Define the URL you want to redirect to
-      var aboutUrl = 'pages/about.html'; // Replace with your desired URL
-
-      // Add a class to the body to trigger the transition effect
-      document.body.classList.add(&quot;fade-out&quot;);
-
-      // Use requestAnimationFrame for smoother animations
-      var start = null;
-
-     
-
-      function step(timestamp) {
-        if (!start) start = timestamp;
-        var progress = timestamp - start;
-        document.body.style.opacity = 1 - progress / 700; 
-        document.body.style.transform = &quot;scale(&quot; + (1 - progress / 700 * 0.1) + &quot;)&quot;; 
-        if (progress < 700) {
-          requestAnimationFrame(step);
-        } else {
-          window.location.href = aboutUrl;
-        }
-      }
-      requestAnimationFrame(step);
-    }
-  </script>
+ 
 
 
 
@@ -1289,6 +1497,10 @@ $('.back_btn').click(function () {
 });
 //# sourceURL=pen.js
     </script>
+
+
+    
+  
 
   
 </body>
